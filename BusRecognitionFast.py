@@ -60,6 +60,9 @@ while brightness is False:
     red_mask = cv2.inRange(hsv, lower_red, upper_red)
     red_mask2 = cv2.inRange(hsv, lower_red2, upper_red2)
     finalred_mask = cv2.bitwise_or(red_mask, red_mask2)
+    
+    # Bitwise-AND mask and original image ("AND"s the mask and the original image)
+    redcrop = cv2.bitwise_and(img, img, mask=finalred_mask)
 
     # have a mask that only shows white colors in an image (grayscale output)
     white_mask = cv2.inRange(forfinal, lower_white, upper_white)
@@ -69,9 +72,6 @@ while brightness is False:
 
     # have a mask that shows both white or yellow for both bus number types
     busnumber_mask = cv2.bitwise_or(white_mask, yellow_mask)
-
-    # Bitwise-AND mask and original image ("AND"s the mask and the original image)
-    redcrop = cv2.bitwise_and(img, img, mask=finalred_mask)
 
     # Canny edge detection and adding further blur to the photo
     edges = cv2.Canny(finalred_mask, 1019, 1529)
