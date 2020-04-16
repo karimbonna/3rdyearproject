@@ -97,7 +97,6 @@ while brightness is False:
                 rectimage = cv2.rectangle(redcrop, (x, y), (x + w, y + h), (0, 255, 0), 2)
                 croppedimage = img[y:y + h, x:x + w]  # cropping the image based on the coordinates of that contour
                 croppedmask = busnumber_mask[y:y + h, x:x + w]  # Puts the bus number mask back on (white or yellow)
-            # Condition for old double deckers.
             # the y-values are actually read from top to bottom
                 if croppedmask.shape[0] > 2 * croppedmask.shape[1]:
                     print("Not a bus")
