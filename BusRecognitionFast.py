@@ -74,7 +74,7 @@ while brightness is False:
     busnumber_mask = cv2.bitwise_or(white_mask, yellow_mask)
 
     # Canny edge detection and adding further blur to the photo
-    edges = cv2.Canny(finalred_mask, 1019, 1529)
+    edges = cv2.Canny(finalred_mask, 1000, 1500)
     blurredmask = cv2.GaussianBlur(edges, (5, 5), 0)
 
     # Finding all contours in edged photo
