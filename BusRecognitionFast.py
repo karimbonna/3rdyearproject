@@ -48,7 +48,7 @@ while brightness is False:
 
     # define range of white color in HSV
 
-    lower_white = np.array([0, 0, 140])
+    lower_white = np.array([0, 0, 185])
     upper_white = np.array([180, 85, 255])
 
     # define range of yellow color in hsv
