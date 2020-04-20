@@ -8,7 +8,7 @@ from gtts import gTTS
 from BusRecognitionFast import *
 
 # module level variables
-MIN_CONTOUR_AREA = 30
+MIN_CONTOUR_AREA = 40
 
 RESIZED_IMAGE_WIDTH = 28
 RESIZED_IMAGE_HEIGHT = 28
