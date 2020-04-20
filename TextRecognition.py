@@ -41,7 +41,7 @@ def main():
     if brightness is True:
         allContoursWithData = []  # declare empty lists,
         validContoursWithData = []  # we will fill these shortly
-        kernel = np.ones((3, 3), np.uint8)
+        kernel = np.ones((2, 2), np.uint8)
 
 
         MLModel = tf.keras.models.load_model('my_model.h5')
